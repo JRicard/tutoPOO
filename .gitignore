@@ -35,3 +35,11 @@
 /.idea/modules.xml
 /.idea/tutoPOO.iml
 /.idea/vcs.xml
+/cmake-build-debug/CMakeFiles/tutoPOO.dir/main.cpp.obj
+/cmake-build-debug/.ninja_deps
+/cmake-build-debug/.ninja_log
+/cmake-build-debug/tutoPOO.exe
+/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-d04c91c7ffd0cd838d6c.json
+/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-a192a18174a84592abac.json
+/cmake-build-debug/.cmake/api/v1/reply/index-2024-03-05T13-44-09-0482.json
+/cmake-build-debug/.cmake/api/v1/reply/target-tutoPOO-Debug-1044360029eaef72efd6.json
