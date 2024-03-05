@@ -1,34 +1,7 @@
 #include <iostream>
+#include "Personnage.h"
 
 using namespace std;
-
-class Personnage{
-    // Méthodes
-    public :
-        void recevoirDegats(int nbDegats){
-
-        }
-
-        void attaquer(Personnage &cible){
-        }
-
-        void boirePotionDeVie(int quantitePotion){
-        }
-
-        void changerArme(string nomNouvelleArme, int degatsNouvelleArme){
-        }
-
-        bool estVivant(){
-        }
-
-    private:
-        // Attributs
-        int m_vie;
-        int m_mana;
-        string m_nomArme;
-        int m_degatsArme;
-};
-
 
 int main() {
     Personnage david, goliath;
