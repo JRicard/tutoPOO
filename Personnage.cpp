@@ -6,6 +6,11 @@
 
 using namespace std;
 
+Personnage::Personnage(std::string nomArme, int degatsArme) {
+    m_nomArme = nomArme;
+    m_degatsArme = degatsArme;
+}
+
 void Personnage::recevoirDegats(int nbDegats) {
     m_vie = m_vie - nbDegats;
 
