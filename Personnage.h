@@ -7,11 +7,13 @@
 
 #include <string>
 #include <iostream>
+#include <cassert>
 
 class Personnage{
     public:
         Personnage() = default;
         Personnage(std::string nomArme, int degatsArme);
+        Personnage(Personnage const& autre);
         void recevoirDegats(int nbDegats);
         void attaquer(Personnage &cible);
         void boirePotionDeVie(int quantitePotion);

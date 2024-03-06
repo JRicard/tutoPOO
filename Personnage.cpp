@@ -9,8 +9,13 @@ using namespace std;
 Personnage::Personnage(std::string nomArme, int degatsArme) {
     m_nomArme = nomArme;
     m_degatsArme = degatsArme;
+    assert(m_degatsArme >= 0);
 }
 
+Personnage::Personnage(Personnage const& autre) {
+    m_nomArme = autre.m_nomArme;
+    m_degatsArme = autre.m_degatsArme;
+}
 void Personnage::recevoirDegats(int nbDegats) {
     m_vie = m_vie - nbDegats;
 
