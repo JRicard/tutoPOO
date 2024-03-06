@@ -12,9 +12,9 @@
 
 class Personnage{
     public:
-        Personnage() = default;
-        Personnage(Arme arme);
-        Personnage(Personnage const& autre);
+        Personnage(std::string nom);
+        Personnage(std::string nom, Arme arme);
+        Personnage(std::string nom, Personnage const& autre);
         ~Personnage();
 
         void recevoirDegats(int nbDegats);
@@ -22,9 +22,10 @@ class Personnage{
         void boirePotionDeVie(int quantitePotion);
         void changerArme(std::string nomNouvelleArme, int degatsNouvelleArme);
         bool estVivant() const;
+        void afficherEtat() const;
 
     private:
-
+        std::string m_nom;
         int m_vie{100};
         int m_mana{100};
         Arme m_arme;

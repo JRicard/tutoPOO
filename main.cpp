@@ -4,7 +4,9 @@
 using namespace std;
 
 int main() {
-    Personnage david, goliath;
+    Personnage david("David"), goliath("Goliath", {"Fourchette", 5});
+    david.afficherEtat();
+    goliath.afficherEtat();
     //Création de 2 objets de type Personnage : david et goliath
 
     goliath.attaquer(david); //goliath attaque david
@@ -14,6 +16,9 @@ int main() {
 
     goliath.changerArme("Double hache tranchante veneneuse de la mort", 40);
     goliath.attaquer(david);
+
+    david.afficherEtat();
+    goliath.afficherEtat();
 
     return 0;
 }
