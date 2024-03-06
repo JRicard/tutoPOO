@@ -6,7 +6,6 @@
 
 using namespace std;
 
-
 void Personnage::recevoirDegats(int nbDegats) {
     m_vie = m_vie - nbDegats;
 

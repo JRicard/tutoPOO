@@ -10,7 +10,7 @@
 
 class Personnage{
     public:
-
+        Personnage() = default;
         void recevoirDegats(int nbDegats);
         void attaquer(Personnage &cible);
         void boirePotionDeVie(int quantitePotion);
@@ -19,10 +19,10 @@ class Personnage{
 
     private:
 
-        int m_vie;
-        int m_mana;
-        std::string m_nomArme; //Pas de using namespace std, il faut donc mettre std:: devant string
-        int m_degatsArme;
+        int m_vie{100};
+        int m_mana{100};
+        std::string m_nomArme{"Epee rouillee"};
+        int m_degatsArme{10};
 };
 
 #endif //PERSONNAGE_H

@@ -5,4 +5,5 @@ set(CMAKE_CXX_STANDARD 23)
 
 add_executable(tutoPOO main.cpp
         Personnage.cpp
-        Personnage.h)
+        Personnage.h
+        main.cpp)
