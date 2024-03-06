@@ -13,7 +13,7 @@
 class Personnage{
     public:
         Personnage() = default;
-        Personnage(std::string nomArme, int degatsArme);
+        Personnage(Arme arme);
         Personnage(Personnage const& autre);
         ~Personnage();
 
@@ -27,8 +27,7 @@ class Personnage{
 
         int m_vie{100};
         int m_mana{100};
-        std::string m_nomArme{"Epee rouillee"};
-        int m_degatsArme{10};
+        Arme m_arme;
 };
 
 #endif //PERSONNAGE_H

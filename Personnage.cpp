@@ -7,16 +7,9 @@
 using namespace std;
 
 // Constructeurs & Destructeurs
-Personnage::Personnage(std::string nomArme, int degatsArme) {
-    m_nomArme = nomArme;
-    m_degatsArme = degatsArme;
-    assert(m_degatsArme >= 0);
-}
+Personnage::Personnage(Arme arme) : m_arme{arme} {}
 
-Personnage::Personnage(Personnage const& autre) {
-    m_nomArme = autre.m_nomArme;
-    m_degatsArme = autre.m_degatsArme;
-}
+Personnage::Personnage(Personnage const& autre) : m_arme{autre.m_arme}{}
 
 Personnage::~Personnage() {}
 
@@ -30,7 +23,7 @@ void Personnage::recevoirDegats(int nbDegats) {
 }
 
 void Personnage::attaquer(Personnage &cible) {
-    cible.recevoirDegats(m_degatsArme);
+    cible.recevoirDegats(m_arme.getDegats());
 }
 
 void Personnage::boirePotionDeVie(int quantitePotion) {
@@ -41,8 +34,7 @@ void Personnage::boirePotionDeVie(int quantitePotion) {
 }
 
 void Personnage::changerArme(std::string nomNouvelleArme, int degatsNouvelleArme) {
-    m_nomArme = nomNouvelleArme;
-    m_degatsArme = degatsNouvelleArme;
+    m_arme.changer(nomNouvelleArme, degatsNouvelleArme);
 }
 
 bool Personnage::estVivant() const {
