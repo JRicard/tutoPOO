@@ -14,6 +14,11 @@ class Arme {
         Arme() = default;
         Arme(std::string nom, int degats);
 
+        std::string getNom() const;
+        int getDegats() const;
+        void setNom(std::string nouveauNom);
+        void setDegats(int nouveauxDegats);
+
         void changer(std::string nom, int degats);
         void afficher() const;
 
