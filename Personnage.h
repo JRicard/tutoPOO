@@ -8,17 +8,20 @@
 #include <string>
 #include <iostream>
 #include <cassert>
+#include "Arme.h"
 
 class Personnage{
     public:
         Personnage() = default;
         Personnage(std::string nomArme, int degatsArme);
         Personnage(Personnage const& autre);
+        ~Personnage();
+
         void recevoirDegats(int nbDegats);
         void attaquer(Personnage &cible);
         void boirePotionDeVie(int quantitePotion);
         void changerArme(std::string nomNouvelleArme, int degatsNouvelleArme);
-        bool estVivant();
+        bool estVivant() const;
 
     private:
 

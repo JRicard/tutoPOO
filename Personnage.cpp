@@ -6,6 +6,7 @@
 
 using namespace std;
 
+// Constructeurs & Destructeurs
 Personnage::Personnage(std::string nomArme, int degatsArme) {
     m_nomArme = nomArme;
     m_degatsArme = degatsArme;
@@ -16,6 +17,11 @@ Personnage::Personnage(Personnage const& autre) {
     m_nomArme = autre.m_nomArme;
     m_degatsArme = autre.m_degatsArme;
 }
+
+Personnage::~Personnage() {}
+
+// Méthodes
+
 void Personnage::recevoirDegats(int nbDegats) {
     m_vie = m_vie - nbDegats;
 
@@ -39,6 +45,6 @@ void Personnage::changerArme(std::string nomNouvelleArme, int degatsNouvelleArme
     m_degatsArme = degatsNouvelleArme;
 }
 
-bool Personnage::estVivant() {
+bool Personnage::estVivant() const {
     return m_vie > 0;
 }
